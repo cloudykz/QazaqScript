@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жазба алаңы — QazaqScript</title>
+  <meta name="description" content="QazaqScript жазба алаңы — қазақша код жазыңыз, аударма нәтижесін көріңіз.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="playground" class="bg-surface-warm text-ink font-sans antialiased min-h-screen flex flex-col">
+  <nav class="bg-surface border-b border-surface-border shrink-0" id="nav" data-active="playground"></nav>
+
+  <div class="flex flex-wrap items-center gap-3 px-4 sm:px-6 py-3 bg-surface border-b border-surface-border shrink-0">
+    <button class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors"
+            id="btn-run">
+      <span class="w-2 h-2 rounded-full bg-white/80" aria-hidden="true"></span>
+      Іске қосу
+    </button>
+    <button class="inline-flex items-center px-4 py-2 rounded-md border border-surface-border bg-surface text-sm font-medium text-ink hover:bg-surface-warm transition-colors"
+            id="btn-share">
+      Бөлісу
+    </button>
+    <span id="share-status" class="text-sm text-ink-faint"></span>
+  </div>
+
+  <div class="flex-1 grid grid-cols-1 md:grid-cols-2 min-h-0">
+    <div class="flex flex-col border-b md:border-b-0 md:border-r border-surface-border min-h-[40vh] md:min-h-0">
+      <div class="px-4 py-2 bg-surface-warm border-b border-surface-border flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+        <span class="text-xs font-mono font-medium uppercase tracking-wider text-ink-muted">QazaqScript</span>
+      </div>
+      <textarea class="code flex-1 w-full p-4 bg-surface font-mono text-sm leading-relaxed text-ink resize-none border-none"
+                id="qs-code" spellcheck="false"></textarea>
+    </div>
+
+    <div class="flex flex-col min-h-[40vh] md:min-h-0">
+      <div class="px-4 py-2 bg-surface-warm border-b border-surface-border flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-ink-faint" aria-hidden="true"></span>
+        <span class="text-xs font-mono font-medium uppercase tracking-wider text-ink-muted">Аударма коды</span>
+      </div>
+      <textarea class="code flex-1 w-full p-4 bg-surface-warm/50 font-mono text-sm leading-relaxed text-ink-muted resize-none border-none"
+                id="js-code" readonly spellcheck="false"></textarea>
+
+      <div class="px-4 py-2 bg-slate-800 border-t border-slate-700 flex items-center gap-2">
+        <span class="text-xs font-mono font-medium uppercase tracking-wider text-slate-400">Шығыс</span>
+      </div>
+      <div class="console min-h-[7rem] max-h-48 overflow-auto p-4 bg-slate-900 font-mono text-sm leading-relaxed text-slate-300"
+           id="console"></div>
+    </div>
+  </div>
+
+  <script src="lib/qazaqscript.js"></script>
+  <script src="assets/nav.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

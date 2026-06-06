@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+html {
+  font-size: clamp(15px, 1.6vw, 17px);
+}
+
+textarea.code {
+  tab-size: 2;
+  -moz-tab-size: 2;
+}
+
+textarea.code:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px rgba(227, 76, 38, 0.25);
+}
+
+.console::-webkit-scrollbar { width: 6px; height: 6px; }
+.console::-webkit-scrollbar-track { background: #1e293b; }
+.console::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+
+.bg-paper {
+  background-color: #faf9f7;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(227, 76, 38, 0.12), transparent),
+    radial-gradient(ellipse 50% 40% at 80% 50%, rgba(26, 26, 26, 0.04), transparent);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.6s ease-out 0.15s both;
+}

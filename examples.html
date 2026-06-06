@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мысалдар — QazaqScript</title>
+  <meta name="description" content="QazaqScript дайын бағдарлама мысалдары — калькулятор, ойындар, тапсырма тізімі.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="examples" class="bg-paper text-ink font-sans antialiased min-h-screen flex flex-col">
+  <nav class="bg-surface border-b border-surface-border sticky top-0 z-50 backdrop-blur-sm bg-white/90" id="nav" data-active="examples"></nav>
+
+  <main class="flex-1 max-w-site mx-auto px-4 sm:px-6 py-10 sm:py-14 w-full">
+    <header class="mb-10 max-w-prose">
+      <p class="text-xs font-mono uppercase tracking-widest text-accent mb-2">Кітапхана</p>
+      <h1 class="font-serif text-3xl sm:text-4xl font-bold text-ink tracking-tight">Мысалдар</h1>
+      <p class="mt-3 text-ink-muted leading-relaxed">Дайын бағдарламаларды ашып, өзгертіп көріңіз.</p>
+    </header>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="examples-grid"></div>
+  </main>
+
+  <footer class="border-t border-surface-border bg-surface" id="site-footer"></footer>
+
+  <script src="assets/nav.js"></script>
+  <script src="assets/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
